@@ -7,8 +7,21 @@ class SearchBar extends React.Component{
         this.state = { 
             location: ''
         }
+    //     setInterval(() => { 
+    //     this.setState({ 
+    //     location: 'my location'
+    //     })
+    //     },1000)
     }
+    onInputChange(e){ 
+        this.setState({ 
+            location: e.target.value
+        })
+        console.log('called on input change', e.target.value);
+            }
 
+    // render function is triggered whenever setting or updating
+    // the state using the setState function
     render(){ 
         const location = this.state.location
 
@@ -18,7 +31,11 @@ class SearchBar extends React.Component{
                <button> 
                    Search
                 </button> 
-                <input id="search" name="search">
+                <input 
+                id="search" 
+                name="search" 
+                value={location} 
+                onChange={e => this.onInputChange(e)}>
 
                 </input>
             </form>
