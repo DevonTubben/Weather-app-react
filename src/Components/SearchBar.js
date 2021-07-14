@@ -20,14 +20,17 @@ class SearchBar extends React.Component{
         console.log('called on input change', e.target.value);
             }
 
+    onFormSubmit(e){ 
+        e.preventDefault()
+    }
+
     // render function is triggered whenever setting or updating
     // the state using the setState function
     render(){ 
         const location = this.state.location
 
         return(
-            <form> 
-                {location}
+            <form onSubmit={(e) => this.onFormSubmit(e)}> 
                <button> 
                    Search
                 </button> 
