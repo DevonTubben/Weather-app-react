@@ -1,4 +1,5 @@
 import React from 'react'
+import { getCurrentWeather } from './API/openweather.api'
 
 // This is a class Component
 class SearchBar extends React.Component{ 
@@ -7,12 +8,11 @@ class SearchBar extends React.Component{
         this.state = { 
             location: ''
         }
-    //     setInterval(() => { 
-    //     this.setState({ 
-    //     location: 'my location'
-    //     })
-    //     },1000)
+   getCurrentWeather("Detroit").then((res) => 
+   console.log('res', res)
+   )
     }
+
     onInputChange(e){ 
         this.setState({ 
             location: e.target.value
