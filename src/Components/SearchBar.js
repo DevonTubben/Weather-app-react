@@ -1,5 +1,6 @@
-import React from 'react'
-import { getCurrentWeather } from 'src/API/openweatherAPI'
+import React from 'react';
+import { getCurrentWeather } from './../API/openweatherAPI'
+ 
 
 // This is a class Component
 class SearchBar extends React.Component{ 
