@@ -1,19 +1,57 @@
 import './App.css';
-import SearchBar from './Components/SearchBar'
-import CurrentWeather from './Components/Current-Weather'
+import SearchBar from './Components/SearchBar';
+import CurrentWeather from './Components/Current-Weather';
+import React from 'react';
+import { getCurrentWeather } from './API/openweatherAPI';
+ 
 
 //this is a functional component 
 // returns a template
-function App() {
+class App extends React.Component {
+  constructor(props){ 
+    super(props)
+    this.state = { 
+        location: '',
+        temperature: ''
+    }
+//     getCurrentWeather("Detroit").then((res) => {
+//     console.log("res", res)
+// }) 
+}
+
+onInputChange(e){ 
+    this.setState({ 
+        location: e.target.value
+    })
+    console.log('called on input change', e.target.value);
+        }
+      
+onFormSubmit(){ 
+    getCurrentWeather(this.state.location)
+    .then((res) => {
+    this.setState({ 
+        temperature: res.data.main.temp
+    })
+})
+}
+
+
+  render(){ 
   return (
     <div className="App">
       <h1> 
         Weather App
       </h1>
-      <SearchBar />
-      <CurrentWeather />
+      <SearchBar 
+      location={this.state.location} 
+      inputChange={e => this.onInputChange(e)}
+      formSubmitted={() => this.onFormSubmit()}
+      />
+      <CurrentWeather currentTemperature={this.state.temperature}/>
     </div>
   );
 }
+}
+
 
 export default App;
