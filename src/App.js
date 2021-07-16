@@ -1,5 +1,6 @@
 import './App.css';
 import SearchBar from './Components/SearchBar'
+import CurrentWeather from './Components/Current-Weather'
 
 //this is a functional component 
 // returns a template
@@ -10,6 +11,7 @@ function App() {
         Weather App
       </h1>
       <SearchBar />
+      <CurrentWeather />
     </div>
   );
 }
