@@ -10,9 +10,9 @@ class SearchBar extends React.Component{
             location: '',
             temperature: ''
         }
-        getCurrentWeather("Detroit").then((res) => {
-        console.log("res", res)
-    }) 
+    //     getCurrentWeather("Detroit").then((res) => {
+    //     console.log("res", res)
+    // }) 
 }
 
     onInputChange(e){ 
@@ -27,6 +27,9 @@ class SearchBar extends React.Component{
 
         getCurrentWeather(this.state.location)
         .then((res) => {
+        this.setState({ 
+            temperature: res.data.main.temp
+        })
     })
 }
 
