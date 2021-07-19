@@ -12,7 +12,10 @@ class App extends React.Component {
     super(props)
     this.state = { 
         location: '',
-        temperature: ''
+        temperature: '',
+        feelsLike: '',
+        description: '', 
+        icon: ''
     }
 //     getCurrentWeather("Detroit").then((res) => {
 //     console.log("res", res)
@@ -30,7 +33,10 @@ onFormSubmit(){
     getCurrentWeather(this.state.location)
     .then((res) => {
     this.setState({ 
-        temperature: res.data.main.temp
+        temperature: res.data.main.temp,
+        feelsLike: res.data.main.feels_like, 
+        description: res.data.weather[0].main, 
+        icon: res.data.weather[0].icon
     })
 })
 }
@@ -47,7 +53,12 @@ onFormSubmit(){
       inputChange={e => this.onInputChange(e)}
       formSubmitted={() => this.onFormSubmit()}
       />
-      <CurrentWeather currentTemperature={this.state.temperature}/>
+      <CurrentWeather 
+      currentTemperature={this.state.temperature}
+      feelsLike={this.state.feelsLike}
+      description={this.state.description}
+      icon={this.state.icon}
+      />
     </div>
   );
 }
