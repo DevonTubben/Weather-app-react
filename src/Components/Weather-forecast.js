@@ -4,7 +4,7 @@ class Forecast extends React.Component {
     render(){ 
         const forecastItems = this.props.hourlyForecast.map((f) => {
         // this.props.hourlyForecast.map((f) => {
-            const url= `http://openweathermap.org/img/wn/${f.weather[0]}@2x.png`
+            const url= `http://openweathermap.org/img/wn/${f.weather[0].icon}@2x.png`
             let ampm = "AM"
             let hour = new Date(f.dt * 1000).getHours();
             
