@@ -11,7 +11,7 @@ class CurrentWeather extends React.Component {
             <img className="current-weather_icon" src={url} alt={this.props.description} />
             </div>
             <div>
-            <p className="current-weather_feels-like"> Feels Like {this.props.feelsLike} </p>
+            <p className="current-weather_feels-like">{this.props.feelsLike} </p>
             </div>
             </div>
         )

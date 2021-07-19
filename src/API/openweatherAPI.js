@@ -10,7 +10,7 @@ return axios.get(
 )
 }
 function getForecast(lat, lon){ 
-    return axios.get(`${Base_Url}onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
+    return axios.get(`${Base_Url}onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`)
 }
 
 
