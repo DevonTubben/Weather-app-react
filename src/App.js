@@ -3,6 +3,7 @@ import SearchBar from './Components/SearchBar';
 import CurrentWeather from './Components/Current-Weather';
 import React from 'react';
 import { getCurrentWeather } from './API/openweatherAPI';
+import Forecast from './Components/Weather-forecast'
  
 
 //this is a functional component 
@@ -59,6 +60,7 @@ onFormSubmit(){
       description={this.state.description}
       icon={this.state.icon}
       />
+      <Forecast />
     </div>
   );
 }
