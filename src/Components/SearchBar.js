@@ -49,6 +49,7 @@ class SearchBar extends React.Component{
                 <input 
                 id="search" 
                 name="search" 
+                placeholder="City.."
                 value={location} 
                 onChange={e => this.onInputChange(e)}>
                 </input>
