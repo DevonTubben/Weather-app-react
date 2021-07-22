@@ -24,6 +24,16 @@ class NavBar extends Component {
                 > 
                     Home
                 </NavLink>
+                <NavLink
+                    to='/Discussion'
+                    exact 
+                    style={link}
+                    activeStyle= {{ 
+                        background: 'darkblue'
+                    }}
+                > 
+                    Discussion
+                </NavLink>
             </div>
         )
     }

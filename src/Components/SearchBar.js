@@ -6,13 +6,6 @@ import { getCurrentWeather } from './../API/openweatherAPI'
 class SearchBar extends React.Component{ 
     constructor(props){ 
         super(props)
-        // this.state = { 
-        //     location: '',
-        //     temperature: ''
-        // }
-    //     getCurrentWeather("Detroit").then((res) => {
-    //     console.log("res", res)
-    // }) 
 }
 
     onInputChange(e){ 
