@@ -7,6 +7,7 @@ import { getCurrentWeather, getForecast } from './API/openweatherAPI';
 import Forecast from './Components/Weather-forecast';
 import Home from './Components/Home'
 
+import Discussion from './Containers/Discussion'
 import NavBar from './Components/NavBar'
 
 //this is a functional component 
@@ -66,6 +67,7 @@ getForecast()
       <NavBar />
       <Switch> 
         <Route exact path='/' component={Home}/>
+        <Route exact path='/Discussion' component={Discussion}/>
       </Switch>
       {/* <Home /> */}
       <SearchBar 
