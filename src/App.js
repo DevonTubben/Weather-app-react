@@ -3,8 +3,8 @@ import SearchBar from './Components/SearchBar';
 import CurrentWeather from './Components/Current-Weather';
 import React from 'react';
 import { getCurrentWeather, getForecast } from './API/openweatherAPI';
-import Forecast from './Components/Weather-forecast'
- 
+import Forecast from './Components/Weather-forecast';
+import Home from './Components/Home'
 
 //this is a functional component 
 // returns a template
@@ -59,9 +59,7 @@ getForecast()
   render(){ 
   return (
     <div className="App">
-      <h1> 
-        Weather App
-      </h1>
+      <Home />
       <SearchBar 
       location={this.state.location} 
       inputChange={e => this.onInputChange(e)}
