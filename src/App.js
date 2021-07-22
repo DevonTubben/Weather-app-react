@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
 import SearchBar from './Components/SearchBar';
 import CurrentWeather from './Components/Current-Weather';
@@ -5,6 +6,8 @@ import React from 'react';
 import { getCurrentWeather, getForecast } from './API/openweatherAPI';
 import Forecast from './Components/Weather-forecast';
 import Home from './Components/Home'
+
+import NavBar from './Components/NavBar'
 
 //this is a functional component 
 // returns a template
@@ -58,8 +61,13 @@ getForecast()
 
   render(){ 
   return (
+    <Router> 
     <div className="App">
-      <Home />
+      <NavBar />
+      <Switch> 
+        <Route exact path='/' component={Home}/>
+      </Switch>
+      {/* <Home /> */}
       <SearchBar 
       location={this.state.location} 
       inputChange={e => this.onInputChange(e)}
@@ -73,6 +81,7 @@ getForecast()
       />
       <Forecast hourlyForecast={this.state.hourlyForecast} />
     </div>
+    </Router>
   );
 }
 }
