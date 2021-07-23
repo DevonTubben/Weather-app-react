@@ -19,8 +19,9 @@ class DiscussionForm extends Component {
         return(
         <div>
             <form> 
-                <label> Share your thoughts: </label>
-                <input type="text" name="title" onChange={this.handleChange}/>
+                <label> Share your thoughts: </label><br/>
+                <input type="text" name="title" onChange={this.handleChange}/><br/>
+                <textarea type="text" name="description" onChange={this.handleChange}/><br/>
             </form>
         </div>
         )
