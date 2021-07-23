@@ -27,6 +27,18 @@ class App extends React.Component {
 
 }
 
+componentDidMount(){ 
+  fetch('http://localhost:3002/Discussion')
+  .then(res => res.json())
+  .then(discussion => this.setState({ discussion}))
+}
+
+addPost = (post) => { 
+  this.setState({
+    discussion: [...this.state.discussion, post]
+  })
+}
+
 onInputChange(e){ 
     this.setState({ 
         location: e.target.value
@@ -57,8 +69,8 @@ async onFormSubmit(){
       <NavBar />
       <Switch> 
         <Route exact path='/' component={Home}/>
-        <Route exact path='/Discussion' component={Discussion}/>
-        <Route exact path='/Discussion/new' component={DiscussionForm}/>
+        <Route exact path='/Discussion' render={() => <Discussion discussion={this.state.dicussion}/>}/>
+        <Route exact path='/Discussion/new' render={() => <DiscussionForm addPost={this.addPost}/>}/>
       </Switch>
       {/* <Home /> */}
       <SearchBar 
