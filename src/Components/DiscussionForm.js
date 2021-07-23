@@ -27,7 +27,8 @@ class DiscussionForm extends Component {
                 title: this.state.title, 
                 description: this.state.description 
             })
-        })
+        }).then(res => res.json())
+        .then(discussion => this.props.addPost(discussion))
     }
 
     render(){ 

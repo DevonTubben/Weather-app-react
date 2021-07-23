@@ -4,7 +4,7 @@ class Talk extends Component {
     render(){ 
         return( 
             <div> 
-
+                {this.props.discussion.title}
             </div>
         )
     }

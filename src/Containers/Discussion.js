@@ -3,12 +3,12 @@ import Talk from '../Components/Talk'
 import NewTalk from '../Components/NewTalk'
 
 class Discussion extends Component { 
-    constructor(){ 
-        super()
-        this.state = {
-            discussion: []
-        }
-    }
+    // constructor(){ 
+    //     super()
+    //     this.state = {
+    //         discussion: []
+    //     }
+    // }
 
     // componentDidMount(){ 
     //     fetch('http://localhost:3002/Discussion')
