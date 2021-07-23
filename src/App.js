@@ -10,6 +10,7 @@ import Home from './Components/Home'
 import Discussion from './Containers/Discussion'
 import NavBar from './Components/NavBar'
 import DiscussionForm from './Components/DiscussionForm'
+import DiscussionPage from './Components/DiscussionPage'
 
 //this is a functional component 
 // returns a template
@@ -71,6 +72,7 @@ async onFormSubmit(){
         <Route exact path='/' component={Home}/>
         <Route exact path='/Discussion' render={() => <Discussion discussion={this.state.dicussion}/>}/>
         <Route exact path='/Discussion/new' render={() => <DiscussionForm addPost={this.addPost}/>}/>
+        <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionForm {...routerProps} talk={this.state.dicussion.find(talk => talk.id === routerProps.match.params.id)}  />}/>
       </Switch>
       {/* <Home /> */}
       <SearchBar 

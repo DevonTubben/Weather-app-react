@@ -14,3 +14,5 @@ class DiscussionPage extends Component {
         )
     }
 }
+
+export default DiscussionPage;
