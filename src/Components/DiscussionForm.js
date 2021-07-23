@@ -17,7 +17,17 @@ class DiscussionForm extends Component {
 
     handleSubmit = (e) => { 
         e.preventDefault()
-        console.log("submit")
+        fetch(`http://localhost:3002/discussion`, { 
+            method: 'POST', 
+            headers: { 
+                'Content-type': 'application/json', 
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ 
+                title: this.state.title, 
+                description: this.state.description 
+            })
+        })
     }
 
     render(){ 
@@ -28,6 +38,7 @@ class DiscussionForm extends Component {
                 <input type="text" name="title" onChange={this.handleChange}/><br/>
                 <label> Share your thoughts: </label><br/>
                 <textarea type="text" name="description" onChange={this.handleChange}/><br/>
+                <button type="submit">Submit</button><br/>
             </form>
         </div>
         )
