@@ -6,20 +6,20 @@ class Discussion extends Component {
     constructor(){ 
         super()
         this.state = {
-            Discussion: []
+            discussion: []
         }
     }
 
     componentDidMount(){ 
         fetch('http://localhost:3002/Discussion')
         .then(res => res.json())
-        .then(Discussion => this.setState({ Discussion}))
+        .then(discussion => this.setState({ discussion}))
     }
     render(){ 
-        const talk = this.state.talk.map(talk => <Talk talk={talk} />)
+        const discussion = this.state.discussion.map(talk => <Talk talk={talk} />)
         return ( 
             <div> 
-                {talk}
+                {discussion}
                 <NewTalk />
             </div>
 

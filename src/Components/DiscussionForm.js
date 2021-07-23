@@ -15,10 +15,15 @@ class DiscussionForm extends Component {
         })
     }
 
+    handleSubmit = (e) => { 
+        e.preventDefault()
+        console.log("submit")
+    }
+
     render(){ 
         return(
         <div>
-            <form> 
+            <form onSubmit={this.handleSubmit}> 
                 <label> Share your thoughts: </label><br/>
                 <input type="text" name="title" onChange={this.handleChange}/><br/>
                 <textarea type="text" name="description" onChange={this.handleChange}/><br/>
