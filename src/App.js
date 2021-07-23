@@ -9,6 +9,7 @@ import Home from './Components/Home'
 
 import Discussion from './Containers/Discussion'
 import NavBar from './Components/NavBar'
+import DiscussionForm from './Components/DiscussionForm'
 
 //this is a functional component 
 // returns a template
@@ -68,6 +69,7 @@ getForecast()
       <Switch> 
         <Route exact path='/' component={Home}/>
         <Route exact path='/Discussion' component={Discussion}/>
+        <Route exact path='/Discussion/new' component={DiscussionForm}/>
       </Switch>
       {/* <Home /> */}
       <SearchBar 
