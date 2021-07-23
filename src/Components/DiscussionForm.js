@@ -24,8 +24,9 @@ class DiscussionForm extends Component {
         return(
         <div>
             <form onSubmit={this.handleSubmit}> 
-                <label> Share your thoughts: </label><br/>
+                <label> Title: </label><br/>
                 <input type="text" name="title" onChange={this.handleChange}/><br/>
+                <label> Share your thoughts: </label><br/>
                 <textarea type="text" name="description" onChange={this.handleChange}/><br/>
             </form>
         </div>
