@@ -1,5 +1,6 @@
 import React, { Component } from 'react' 
 import Talk from '../Components/Talk'
+import NewTalk from '../Components/NewTalk'
 
 class Discussion extends Component { 
     constructor(){ 
@@ -19,6 +20,7 @@ class Discussion extends Component {
         return ( 
             <div> 
                 {talk}
+                <NewTalk />
             </div>
 
         )

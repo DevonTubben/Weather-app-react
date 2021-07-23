@@ -24,9 +24,7 @@ class App extends React.Component {
         icon: '', 
         hourlyForecast: []
     }
-//     getCurrentWeather("Detroit").then((res) => {
-//     console.log("res", res)
-// }) 
+
 }
 
 onInputChange(e){ 
@@ -49,16 +47,7 @@ async onFormSubmit(){
         icon: weatherRes.data.weather[0].icon, 
         hourlyForecast: forecastRes.data.hourly
     })
-// })
-
-getForecast()
-// this.setState({ 
-//   temperature: res.data.main.temp,
-//   feelsLike: res.data.main.feels_like, 
-//   description: res.data.weather[0].main, 
-//   icon: res.data.weather[0].icon
-// })
-}
+  }
 
 
   render(){ 
