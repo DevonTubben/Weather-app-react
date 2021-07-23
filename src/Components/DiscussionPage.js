@@ -2,16 +2,22 @@ import React, { Component } from 'react'
 
 class DiscussionPage extends Component { 
     render(){ 
+        const discussion = this.props.discussion.find(discussion => discussion.id == this.props.match.params.id)
+
+        if(discussion){
         return(
             <div>
                 <h1> 
-                    {this.props.discussion.title}
+                    {discussion.title}
                 </h1>
                 <p> 
-                    {this.props.discussion.description}
+                    {discussion.description}
                 </p>
             </div>
         )
+        } else { 
+            return <div> Not working</div>
+        }
     }
 }
 

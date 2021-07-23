@@ -72,7 +72,7 @@ async onFormSubmit(){
         <Route exact path='/' component={Home}/>
         <Route exact path='/Discussion' render={() => <Discussion discussion={this.state.dicussion}/>}/>
         <Route exact path='/Discussion/new' render={() => <DiscussionForm addPost={this.addPost}/>}/>
-        <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionForm {...routerProps} talk={this.state.dicussion.find(talk => talk.id === routerProps.match.params.id)}  />}/>
+        <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionPage {...routerProps} discussion={this.state.discussion}  />}/>
       </Switch>
       {/* <Home /> */}
       <SearchBar 
