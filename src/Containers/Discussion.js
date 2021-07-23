@@ -19,8 +19,10 @@ class Discussion extends Component {
         const discussion = this.state.discussion.map(talk => <Talk talk={talk} />)
         return ( 
             <div> 
-                {discussion}
+                {discussion} 
+            <p> 
                 <NewTalk />
+            </p>
             </div>
 
         )
