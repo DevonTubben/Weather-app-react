@@ -1,4 +1,5 @@
 import React, { Component } from 'react' 
+import { withRouter } from 'react-router-dom'
 
 class DiscussionForm extends Component { 
     constructor(){ 
@@ -28,7 +29,11 @@ class DiscussionForm extends Component {
                 description: this.state.description 
             })
         }).then(res => res.json())
-        .then(discussion => this.props.addPost(discussion))
+        .then(discussion => {
+            this.props.addPost(discussion)
+            this.props.history.push(`/discussion/${discussion.id}`)
+        })
+        
     }
 
     render(){ 
@@ -46,4 +51,4 @@ class DiscussionForm extends Component {
     }
 }
 
-export default DiscussionForm;
+export default withRouter (DiscussionForm);
