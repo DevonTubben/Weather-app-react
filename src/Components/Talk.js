@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 class Talk extends Component { 
     render(){ 
         return( 
-            <Link to={`/discussion/${this.props.discussion.id}`}>
+            <Link to={`/discussion/${this.props.talk.id}`}>
                 <div> 
-                    {this.props.discussion.title}
+                    {this.props.talk.title}
                 </div>
             </Link>
         )

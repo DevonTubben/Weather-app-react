@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
+ // stories = discussion
+    // story = talk
 
 class DiscussionPage extends Component { 
     render(){ 
-        const discussion = this.props.discussion.find(discussion => discussion.id == this.props.match.params.id)
+        const talk = this.props.discussion.find(talk => talk.id == this.props.match.params.id)
 
-        if(discussion){
+        if(talk){
         return(
             <div>
                 <h1> 
-                    {discussion.title}
+                    {talk.title}
                 </h1>
                 <p> 
-                    {discussion.description}
+                    {talk.description}
                 </p>
             </div>
         )
