@@ -30,7 +30,7 @@ class App extends React.Component {
 }
 
 componentDidMount(){ 
-  fetch('http://localhost:3002/Discussion')
+  fetch('http://localhost:3000/Discussion')
   .then(res => res.json())
   .then(discussion => this.setState({ discussion}))
 }
