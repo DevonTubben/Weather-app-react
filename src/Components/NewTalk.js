@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class NewTalk extends Component { 
     render(){ 
         return( 
-            <Link to={'/discussion/new'}> 
+            <Link to={'/Discussion/new'}> 
             <button> Talk </button>
             </Link>
         )

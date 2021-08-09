@@ -24,7 +24,6 @@ class App extends React.Component {
         description: '', 
         icon: '', 
         hourlyForecast: []
-     //   discussion: []
     }
 
 }
@@ -37,7 +36,7 @@ componentDidMount(){
 
 addTalk = (talk) => { 
   this.setState({
-    discussion: [...this.state.discussion, talk]
+     discussion: [...this.state.discussion, talk]
   })
 }
 
@@ -73,7 +72,7 @@ async onFormSubmit(){
         <Route exact path='/' component={Home}/>
         <Route exact path='/Discussion' render={() => <Discussion discussion={this.state.discussion}/>}/>
         <Route exact path='/Discussion/new' render={() => <DiscussionForm addTalk={this.addTalk}/>}/>
-        <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionPage {...routerProps} discussion={this.state.discussion}  />}/>
+        <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionPage {...routerProps} discussion={this.state.discussion} />}/>
       </Switch>
       {/* <Home /> */}
       <SearchBar 

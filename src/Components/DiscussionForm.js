@@ -29,12 +29,9 @@ class DiscussionForm extends Component {
                 description: this.state.description
             })
         }).then(res => res.json())
-        // .then(discussion => {
-        //     this.props.addPost(discussion)
-        //     this.props.history.push(`/discussion/${discussion.id}`)
-        .then(talk => {
+          .then(talk => {
             this.props.addTalk(talk)
-            this.props.history.push(`/discussion/${talk.id}`)
+            this.props.history.push(`/Discussion/${talk.id}`)
         })
         
     }
