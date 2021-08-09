@@ -18,7 +18,7 @@ class DiscussionForm extends Component {
 
     handleSubmit = (e) => { 
         e.preventDefault()
-        fetch(`http://localhost:3002/discussion`, { 
+        fetch(`http://localhost:3000/Discussion`, { 
             method: 'POST', 
             headers: { 
                 'Content-type': 'application/json', 

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
 import SearchBar from './Components/SearchBar';
 import CurrentWeather from './Components/Current-Weather';
-import React from 'react';
+import React, { Component } from 'react';
 import { getCurrentWeather, getForecast } from './API/openweatherAPI';
 import Forecast from './Components/Weather-forecast';
 import Home from './Components/Home'
@@ -71,7 +71,7 @@ async onFormSubmit(){
       <NavBar />
       <Switch> 
         <Route exact path='/' component={Home}/>
-        <Route exact path='/Discussion' render={() => <Discussion discussion={this.state.dicussion}/>}/>
+        <Route exact path='/Discussion' render={() => <Discussion discussion={this.state.discussion}/>}/>
         <Route exact path='/Discussion/new' render={() => <DiscussionForm addTalk={this.addTalk}/>}/>
         <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionPage {...routerProps} discussion={this.state.discussion}  />}/>
       </Switch>

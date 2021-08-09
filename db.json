@@ -1,5 +1,9 @@
-{ 
-    "Discussion": [
-
-    ]
+{
+  "Discussion": [
+    {
+      "title": "August ",
+      "description": "80 degrees with clear skies",
+      "id": 1
+    }
+  ]
 }
