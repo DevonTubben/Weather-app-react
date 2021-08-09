@@ -13,7 +13,7 @@ class DiscussionPage extends Component {
                     {talk.title}
                 </h1>
                 <p> 
-                    {talk.description}
+                    {talk.summary}
                 </p>
             </div>
         )

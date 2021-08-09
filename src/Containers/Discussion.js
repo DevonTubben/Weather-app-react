@@ -20,7 +20,6 @@ class Discussion extends Component {
 
     render(){ 
         const discussion = this.state.discussion.map(talk => <Talk talk={talk} />)
-       // const discussion = this.props.discussion.map(talk => <Talk talk={talk} />)
         return ( 
             <div> 
                 {discussion} 

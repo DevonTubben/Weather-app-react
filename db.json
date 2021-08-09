@@ -2,43 +2,8 @@
   "Discussion": [
     {
       "title": "August ",
-      "description": "80 degrees with clear skies",
+      "summary": "80 degrees with clear skies",
       "id": 1
-    },
-    {
-      "title": "August ",
-      "description": "80 degrees with clear skies",
-      "id": 2
-    },
-    {
-      "title": "August ",
-      "description": "80 degrees with clear skies",
-      "id": 3
-    },
-    {
-      "title": "August 9",
-      "description": "82 degrees and cloudy",
-      "id": 4
-    },
-    {
-      "title": "August ",
-      "description": "practice",
-      "id": 5
-    },
-    {
-      "title": "August ",
-      "description": "practice",
-      "id": 6
-    },
-    {
-      "title": "August ",
-      "description": "practice",
-      "id": 7
-    },
-    {
-      "title": "August ",
-      "description": "practice",
-      "id": 8
     }
   ]
 }

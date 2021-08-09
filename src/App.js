@@ -74,7 +74,6 @@ async onFormSubmit(){
         <Route exact path='/Discussion/new' render={() => <DiscussionForm addTalk={this.addTalk}/>}/>
         <Route exact path='/Discussion/:id' render={(routerProps) => <DiscussionPage {...routerProps} discussion={this.state.discussion} />}/>
       </Switch>
-      {/* <Home /> */}
       <SearchBar 
       location={this.state.location} 
       inputChange={e => this.onInputChange(e)}

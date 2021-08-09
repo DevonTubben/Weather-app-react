@@ -6,7 +6,7 @@ class DiscussionForm extends Component {
         super()
         this.state= { 
             title: '',
-            description: ''
+            summary: ''
         }
     }
 
@@ -26,7 +26,7 @@ class DiscussionForm extends Component {
             },
             body: JSON.stringify({ 
                 title: this.state.title, 
-                description: this.state.description
+                summary: this.state.summary
             })
         }).then(res => res.json())
           .then(talk => {
@@ -43,7 +43,7 @@ class DiscussionForm extends Component {
                 <label> Title: </label><br/>
                 <input type="text" name="title" onChange={this.handleChange}/><br/>
                 <label> Share your thoughts: </label><br/>
-                <textarea type="text" name="description" onChange={this.handleChange}/><br/>
+                <textarea type="text" name="summary" onChange={this.handleChange}/><br/>
                 <button type="submit">Submit</button><br/>
             </form>
         </div>
