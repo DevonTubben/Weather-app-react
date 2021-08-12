@@ -14,6 +14,7 @@ import DiscussionPage from './Components/DiscussionPage'
 
 //this is a functional component 
 // returns a template
+// constructor(props) super(props)
 class App extends React.Component {
   constructor(props){ 
     super(props)
@@ -23,9 +24,9 @@ class App extends React.Component {
         feelsLike: '',
         description: '', 
         icon: '', 
+        wind: '',
         hourlyForecast: []
     }
-
 }
 
 componentDidMount(){ 
@@ -58,7 +59,8 @@ async onFormSubmit(){
         feelsLike: weatherRes.data.main.feels_like, 
         description: weatherRes.data.weather[0].main, 
         icon: weatherRes.data.weather[0].icon, 
-        hourlyForecast: forecastRes.data.hourly
+        hourlyForecast: forecastRes.data.hourly,
+        wind: weatherRes.data.wind.speed
     })
   }
 
@@ -80,7 +82,8 @@ async onFormSubmit(){
       formSubmitted={() => this.onFormSubmit()}
       />
       <CurrentWeather 
-      currentTemperature={this.state.temperature}
+      currentTemperature={this.state.temperature} 
+      wind={this.state.wind}
       feelsLike={this.state.feelsLike}
       description={this.state.description}
       icon={this.state.icon}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCurrentWeather } from './../API/openweatherAPI'
+//import { getCurrentWeather } from './../API/openweatherAPI'
  
 
 // This is a class Component

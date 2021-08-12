@@ -13,7 +13,7 @@ class Forecast extends React.Component {
             ampm = 'PM'
             }
             return(
-            <div className="forecast-item" key="{key}"> 
+            <div className="forecast-item" key={key}> 
                 <p className="forecast-item_hour">{hour}:00 {ampm}</p>
                 <p className="forecast-item_temperature"> {f.temp} </p>
                 <img src={url} alt={f.weather[0].main} />
