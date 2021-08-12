@@ -27,6 +27,7 @@ class App extends React.Component {
         wind: '',
         hourlyForecast: []
     }
+    this.onFormSubmit();
 }
 
 componentDidMount(){ 

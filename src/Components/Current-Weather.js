@@ -6,7 +6,7 @@ class CurrentWeather extends React.Component {
         return( 
             <div className='current-weather'> 
             <div className='current-weather_content'> 
-
+            <div className='current-weather_text'></div>
             <p className="current-weather_temp"> {this.props.currentTemperature}°F </p>
             <p className="current-weather_description"> {this.props.description} </p>
             <p className='current-weather_speed'>Wind: {this.props.wind} MPH</p> 

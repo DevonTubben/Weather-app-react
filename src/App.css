@@ -16,12 +16,9 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(252, 249, 249);
+  padding: 15px; 
 }
 
 .App-link {
@@ -38,12 +35,66 @@
 }
 
 .search-bar{ 
-  text-align: center; 
-  margin: 3rem 0 2rem;
-  display: inline
+  background: transparent;
+  
+  width: 100%;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+}
+.search-bar_button{ 
+  background: transparent;
+  border: 1px solid #fff; 
+  border-left: 0px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  height: 22px;
 }
 
+.search-bar_input{ 
+  background: transparent; 
+  border: 1px solid #fff; 
+  border-left: 0px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  height: 20px;
+  flex-grow: 1;
+}
+input::placeholder { 
+  color: #fff
+}
 
+.search-bar_form { 
+display: flex; 
+}
 
+.current-weather{ 
+  display: flex;
+  background: lightblue;
+  border-radius: 7px;
+}
+.current-weather_content { 
 
+}
+.current-weather_text { 
 
+}
+
+.current-weather_temp { 
+
+}
+
+.current-weather_description { 
+
+}
+
+.current-weather_icon { 
+
+}
+
+.current-weather_speed { 
+
+}
+
+.current-weather_feels-like { 
+
+}
